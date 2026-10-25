@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f8fa" />
+    <title>CMD Gestão — sua loja em controle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="CMD Gestão — início" data-page="dashboard">
+          <span class="brand-mark">c</span>
+          <span class="brand-copy"><strong>cmd<span>.</span></strong><small>GESTÃO</small></span>
+        </a>
+        <nav class="main-nav" aria-label="Menu principal">
+          <button class="nav-link active" data-page="dashboard"><span class="nav-icon">⌂</span>Visão geral</button>
+          <button class="nav-link" data-page="sales"><span class="nav-icon">＋</span>Vendas</button>
+          <button class="nav-link" data-page="products"><span class="nav-icon">▦</span>Produtos</button>
+          <button class="nav-link" data-page="customers"><span class="nav-icon">♙</span>Clientes</button>
+          <button class="nav-link" data-page="credits"><span class="nav-icon">R$</span>Fiado</button>
+          <button class="nav-link" data-page="employees"><span class="nav-icon">♧</span>Equipe</button>
+          <button class="nav-link" data-page="cash"><span class="nav-icon">▣</span>Caixa</button>
+          <button class="nav-link" data-page="reports"><span class="nav-icon">▤</span>Relatórios</button>
+          <button class="nav-link" data-page="store"><span class="nav-icon">⌂</span>Minha loja</button>
+          <button class="nav-link admin-nav" data-page="admin"><span class="nav-icon">✦</span>Admin</button>
+        </nav>
+        <div class="topbar-right">
+          <span class="store-status"><i></i> Loja aberta</span>
+          <select id="store-switcher" class="store-switcher" aria-label="Selecionar loja"></select>
+          <button class="icon-button notification-button" aria-label="Ver alertas" data-page="products" title="Alertas de estoque">♧<b id="alert-count">0</b></button>
+          <button id="sign-out" class="text-action" type="button">Sair</button>
+        </div>
+      </header>
+
+      <main id="app" class="main-content"></main>
+      <div id="modal-root"></div>
+      <div id="toast-root" class="toast-root" aria-live="polite"></div>
+    </div>
+    <script src="./config.js"></script>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
